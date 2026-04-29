@@ -9,6 +9,8 @@ const envSchema = joi
     user_db: joi.string().required(),
     password_db: joi.string().optional().allow(''),
     database: joi.string().required(),
+    host_db: joi.string().required(),
+    port_db: joi.number().required(),
   })
   .unknown(true);
 
@@ -22,4 +24,6 @@ export const envs = {
   user_db: envsVar.user_db,
   password_db: envsVar.password_db,
   database: envsVar.database,
+  host_db: envsVar.host_db,
+  port_db: envsVar.port_db,
 };
