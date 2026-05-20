@@ -11,6 +11,7 @@ const envSchema = joi
     database: joi.string().required(),
     host_db: joi.string().required(),
     port_db: joi.number().required(),
+    NODE_ENV: joi.string().optional().allow(''),
   })
   .unknown(true);
 
@@ -26,4 +27,5 @@ export const envs = {
   database: envsVar.database,
   host_db: envsVar.host_db,
   port_db: envsVar.port_db,
+  NODE_ENV: envsVar.NODE_ENV,
 };
