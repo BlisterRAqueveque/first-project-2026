@@ -27,5 +27,13 @@ export const bookEntity = new EntitySchema({
     deleteDate: {
       deleteDate: 'NOW',
     },
+    userId: {
+      type: 'int',
+      nullable: false,
+    },
+    editUserId: {
+      type: 'int',
+      nullable: false,
+    },
   },
 });
